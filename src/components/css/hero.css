@@ -1,0 +1,342 @@
+/* hero.css */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Theme modes */
+.dark-mode {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #fdedfe; /* Paler background color */
+  color: #475569; /* Softer text color */
+}
+
+/* 3D Background Canvas */
+.particles-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Main container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Content layout */
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+}
+
+/* Left text content */
+.hero-text {
+  flex: 1;
+  max-width: 650px; /* Increased max width */
+}
+
+.greeting {
+  font-size: 3.5rem; /* Increased font size */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #F97316; /* Orange color */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.name {
+  font-size: 4.5rem; /* Increased font size */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-in-out 0.2s both;
+}
+
+/* Keep the text color white only in dark mode */
+.dark-mode .name {
+  color: #ffffff;
+}
+
+.light-mode .name {
+  color: #334155; /* Softer color for light mode */
+}
+
+.profession {
+  font-size: 1.75rem; /* Increased font size */
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.2s ease-in-out 0.4s both;
+}
+
+/* Different profession colors based on theme */
+.dark-mode .profession {
+  color: #4ECDC4; /* Teal color for dark mode */
+}
+
+.light-mode .profession {
+  color: #0EA5E9; /* Lighter blue for light mode */
+}
+
+.profession-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.profession-highlight::after {
+  content: '|';
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+.bio {
+  font-size: 1.125rem; /* Increased font size */
+  line-height: 1.7;
+  margin-bottom: 2.5rem; /* Increased margin */
+  animation: fadeIn 1.4s ease-in-out 0.6s both;
+}
+
+/* Different bio colors based on theme */
+.dark-mode .bio {
+  color: #abb3c5;
+}
+
+.light-mode .bio {
+  color: #64748b; /* Softer text for light mode */
+}
+
+/* CTA and social links */
+.cta-container {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem; /* Increased gap */
+  animation: fadeIn 1.6s ease-in-out 0.8s both;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 0.85rem 2.25rem; /* Larger button */
+  background-color: #F97316;
+  color: white;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem; /* Larger text */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+}
+
+.about-btn:hover {
+  background-color: #EA580C;
+  transform: translateY(-2px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem; /* Increased gap */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* Larger icons */
+  height: 3rem; /* Larger icons */
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.2rem; /* Larger font */
+}
+
+/* Different social link styles based on theme */
+.dark-mode .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.light-mode .social-link {
+  background-color: rgba(71, 85, 105, 0.1);
+  color: #475569;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+.dark-mode .social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.light-mode .social-link:hover {
+  background-color: rgba(71, 85, 105, 0.2);
+}
+
+/* Profile image */
+.profile-container {
+  position: relative;
+  flex-shrink: 0;
+  animation: fadeIn 1.8s ease-in-out 1s both, float 4s ease-in-out infinite;
+}
+
+.profile-image {
+  width: 350px; /* Larger image */
+  height: 350px; /* Larger image */
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  position: relative;
+  background-color: #D6E8EE;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background-image: url('../images/image.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.figma-badge {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 3rem; /* Larger badge */
+  height: 3rem; /* Larger badge */
+  border-radius: 50%;
+  background-color: #F97316;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem; /* Larger font */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Design elements */
+.design-elements {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.ai-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3.5rem; /* Larger badge */
+  height: 3.5rem; /* Larger badge */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DC2626;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem; /* Larger font */
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out 1.2s both;
+}
+
+.ps-badge {
+  position: absolute;
+  top: 8rem;
+  right: 3rem;
+  width: 3.5rem; /* Larger badge */
+  height: 3.5rem; /* Larger badge */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2563EB;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem; /* Larger font */
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out 1.4s both;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 2rem;
+  }
+  
+  .name {
+    font-size: 4rem;
+  }
+  
+  .profile-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+  }
+  
+  .cta-container {
+    justify-content: center;
+  }
+  
+  .profile-container {
+    margin-bottom: 2rem;
+  }
+  
+  .profile-image {
+    width: 250px; /* Slightly larger than original mobile size */
+    height: 250px; /* Slightly larger than original mobile size */
+  }
+}
